@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to use Bulk Bills</title>
+  <meta name="description" content="How to install Bulk Bills, connect to Xero, preview and apply changes to draft bills, undo a batch, and upgrade from the free trial.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">Bulk Bills</a>
+      <nav class="site" aria-label="Site">
+        <a href="how-to.html" aria-current="page">How to use</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:support@curatorpal.co.uk">Support</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      <h1>How to use Bulk Bills</h1>
+      <p class="lead">Bulk Bills is a Chrome extension that bulk-edits draft bills (works with Xero). This page covers installing it, making a change, undoing one, and what the trial includes.</p>
+      <p class="actions">
+        <a class="btn" href="https://chromewebstore.google.com/detail/cgleidjlnecopojgnjklaehnagomcpeo">Add to Chrome</a>
+        <a href="index.html">Back to Bulk Bills</a>
+      </p>
+
+      <h2>1. Install</h2>
+      <ol>
+        <li>Open the <a href="https://chromewebstore.google.com/detail/cgleidjlnecopojgnjklaehnagomcpeo">Bulk Bills listing</a> in the Chrome Web Store.</li>
+        <li>Click <strong>Add to Chrome</strong>, then confirm.</li>
+        <li>Open the Bulk Bills panel from the extension. You can also turn on an optional button on the Xero bills page (go.xero.com) that opens the same panel.</li>
+      </ol>
+      <h2>2. Connect to Xero</h2>
+      <p>In the panel, connect the Xero organisation you want to work on. You sign in with Xero’s own sign-in. We never see your password.</p>
+      <p>You can turn on <strong>Stay connected</strong> if you want to stay signed in after you close Chrome. To remove access later, use <strong>Disconnect this organisation</strong> in the panel, or go to Settings → Connected apps in Xero.</p>
+
+      <h2>3. Select draft bills</h2>
+      <p>Bulk Bills only works with <strong>draft</strong> bills. Approved, paid and voided bills are never shown for editing and are never touched.</p>
+      <p>Filter the drafts by supplier, bill date, due date, reference, account code or tracking, then select the bills you want to change.</p>
+
+      <h2>4. Choose the changes</h2>
+      <p>Pick one change, or combine several in the same batch:</p>
+      <ul>
+        <li><strong>Account code:</strong> on every line, or only lines currently on a given account</li>
+        <li><strong>Tracking:</strong> set or clear up to 2 tracking categories (optionally only on lines with a given account)</li>
+        <li><strong>Line description:</strong> find and replace, add a prefix or suffix</li>
+        <li><strong>Due date:</strong> set a date, or bill date plus a number of days</li>
+        <li><strong>Reference:</strong> set, prefix, suffix, or find and replace</li>
+        <li><strong>Supplier (contact):</strong> change to another active contact</li>
+      </ul>
+
+      <h2>5. Preview</h2>
+      <p>Review the preview before anything is written. It shows every bill and line, old to new, with subtotal, VAT and total before and after.</p>
+      <p>If a change would alter an amount, tax rate, quantity or currency, that bill is blocked and is not included in the write.</p>
+
+      <h2>6. Apply</h2>
+      <p>Apply the changes in a batch. You get a pass or fail result for each bill. Optionally tick <strong>Add a History note</strong> to write a short note describing the change to each bill’s history in Xero.</p>
+      <p>Just before a bill is written, it is re-checked. If it has changed in the meantime, it is skipped. After writing, each bill is re-read to confirm that amounts and VAT have not changed.</p>
+
+      <h2>7. Undo within 7 days</h2>
+      <p>Every batch can be undone for 7 days. You can also download a CSV change report for a batch.</p>
+      <p>Batch history (the data used for undo and the change report) is kept on your computer and is deleted automatically after 7 days, when you click <strong>Forget</strong> or <strong>Hide results</strong>, or when you remove the extension.</p>
+
+      <h2>Trial and upgrade</h2>
+      <ul>
+        <li><strong>Free trial:</strong> 10 bill changes, once. No card needed.</li>
+        <li><strong>Pro:</strong> £12/month or £120/year, up to 3 organisations. Payments are taken securely by Stripe on Stripe’s own checkout page. Cancel any time (use the link in your Stripe receipt email, or email support).</li>
+      </ul>
+      <p>If you don’t pick a plan, Bulk Bills disconnects from that organisation after 14 days. Your bills in Xero are not affected. Reminder emails may be sent on day 7 and day 12, and a notice on day 14; each email has an unsubscribe link, and they stop if you pay.</p>
+
+      <h2>Troubleshooting</h2>
+      <h3>The panel does not connect to Xero</h3>
+      <p>Use Xero’s sign-in in the panel and approve access for the organisation you want. If it is already listed under Settings → Connected apps in Xero, you can disconnect it there and connect again from Bulk Bills.</p>
+
+      <h3>I can’t find a bill</h3>
+      <p>Only draft bills appear. Check your filters (supplier, dates, reference, account code or tracking), and that you have connected the right organisation.</p>
+
+      <h3>A bill was blocked or skipped</h3>
+      <p>A bill is blocked if the change would alter an amount, tax rate, quantity or currency. A bill is skipped if it changed in Xero after you previewed it and before it was written. Check the pass/fail result for that bill, or download the CSV change report.</p>
+
+      <h3>I can’t undo a batch</h3>
+      <p>Undo is available for 7 days. After that, or if you clicked <strong>Forget</strong> or <strong>Hide results</strong>, or removed the extension, the batch history is no longer there. You would need to edit those drafts in Xero yourself.</p>
+
+      <h3>Bulk Bills disconnected after 14 days</h3>
+      <p>If no plan was picked, Bulk Bills disconnects from that organisation after 14 days. Your bills in Xero are unchanged. Connect again and pick a plan if you want to keep using it.</p>
+
+      <h3>Payments or cancelling</h3>
+      <p>Checkout is handled by Stripe. We never see your card details. To cancel a paid plan, use the link in your Stripe receipt email or email us.</p>
+
+      <h2>Support</h2>
+      <p>For help, questions or problems, email <a href="mailto:support@curatorpal.co.uk">support@curatorpal.co.uk</a>.</p>
+      <p>You may also want the <a href="privacy.html">privacy policy</a> or the <a href="https://chromewebstore.google.com/detail/cgleidjlnecopojgnjklaehnagomcpeo">Chrome Web Store listing</a>.</p>
+    </main>
+
+    <footer class="site">
+      <p>Support: <a href="mailto:support@curatorpal.co.uk">support@curatorpal.co.uk</a></p>
+      <p class="fine">Bulk Bills is an independent product, not affiliated with, endorsed or sponsored by Xero Limited. Xero is a trademark of Xero Limited.</p>
+    </footer>
+  </div>
+</body>
+</html>
