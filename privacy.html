@@ -1,38 +1,64 @@
 <!doctype html>
-<html lang="en-GB"><head><meta charset="utf-8"><title>Bulk Bills – Privacy</title>
-<style>body{font:14px/1.5 system-ui,sans-serif;max-width:760px;margin:20px auto;padding:0 12px;color:#111827}li.sub{margin-left:24px;list-style:circle}</style></head><body>
-<h1>Bulk Bills – Privacy Policy</h1>
-<p><strong>Who we are.</strong> Bulk Bills is a Chrome extension made by Peter Kruger, Bourne, Lincolnshire, United Kingdom (&quot;we&quot;). Contact: support@curatorpal.co.uk.</p>
-<p>Bulk Bills works with Xero but is an independent product, not affiliated with, endorsed or sponsored by Xero Limited. Xero is a trademark of Xero Limited.</p>
-<h2>What Bulk Bills does</h2>
-<p>It lets you edit many <strong>draft</strong> bills in your Xero organisation at once (account codes, tracking, line descriptions, due dates, references, contacts). It previews every change and never edits approved, paid or voided bills.</p>
-<h2>What data is processed, and where</h2>
-<ul>
-<li><strong>Your Xero data</strong> (draft bills, line items, suppliers&#x27; names, your chart of accounts, tracking categories, tax rates, contacts) is read from Xero&#x27;s official API <strong>directly by the extension in your browser</strong>. Your bills and other accounting data are never sent to us or to anyone other than Xero.</li>
-<li>It is held <strong>in memory only while the Bulk Bills panel is open</strong>, except for:</li>
-<li class="sub"><strong>Batch history (undo data and change log):</strong> for each batch you applied in the last 7 days, the extension stores on your computer (Chrome local storage) the bill IDs, references and supplier names, the old and new values of only the fields it changed (for example a reference, due date, account code, tracking option, line description, contact), and the result for each bill, so you can undo the batch or download its change report later. The most recent results view is kept the same way. It is deleted automatically after <strong>7 days</strong>, when you click &quot;Forget&quot; (or &quot;Hide results&quot;), or when you remove the extension.</li>
-<li class="sub"><strong>CSV change report:</strong> only if you click &quot;Download&quot;, a file is saved to your computer. You control that file.</li>
-<li><strong>Sign-in tokens.</strong> Xero access and refresh tokens are stored in Chrome&#x27;s session storage and cleared when Chrome closes. If you turn on &quot;Stay connected&quot;, the refresh token is kept in Chrome local storage on your computer until you sign out or remove the extension. Tokens are sent to Xero, except that to check your plan the extension also sends the current short-lived Xero access token to our licence server, which uses it once to ask Xero who you are and which organisations are connected, and does not store or log it.</li>
-<li><strong>History notes.</strong> If you tick &quot;Add a History note&quot;, a short note describing the change is written to each bill&#x27;s history <strong>in Xero</strong>.</li>
-<li><strong>Licence data (our server).</strong> To run the free trial and paid plans, our licence server (hosted by Supabase in the EU, Frankfurt) keeps: your Xero user ID and email address, the IDs of the Xero organisations you have connected, how many bill changes each batch made (a count and a batch ID, not the bills), your trial start date and plan, a random licence token (stored only as a hash), and which reminder emails were sent. It is kept while you use Bulk Bills; email us to have it deleted at any time.</li>
-<li><strong>No analytics, no tracking, no advertising, no cookies of ours.</strong> The extension contacts Xero (login.xero.com, identity.xero.com, api.xero.com), our licence server (cncnthzaxpevxzmmxebo.supabase.co) and, only when you click a plan, opens Stripe&#x27;s checkout page (buy.stripe.com) in a new tab. If you turn on the optional bills-page button, it runs a small script on go.xero.com that only adds that button.</li>
-<li>We do <strong>not</strong> sell, share or aggregate your data, and we do <strong>not</strong> use it to train AI or machine-learning models.</li>
-</ul>
-<h2>Legal basis (UK GDPR)</h2>
-<p>Processing happens on your own device to provide the service you asked for (contract / legitimate interests). Bills may contain personal data about sole-trader suppliers; that data stays in Xero and in your browser. Licence data and trial emails are processed to provide the service and the plan you chose (contract) and to remind you before the free trial ends (legitimate interests; you can unsubscribe with one click).</p>
-<h2>Payments</h2>
-<p>Payments are handled by <strong>Stripe</strong> (Stripe Payments Europe / Stripe, Inc.) on Stripe&#x27;s own checkout page. Stripe processes your name, email, billing address and card details; we never see your card details. Stripe tells our licence server which plan you bought, your Stripe customer and subscription IDs and the subscription status, so the extension can unlock your plan.</p>
-<p><strong>Processors we use:</strong> Stripe (payments), Supabase (hosting the licence server and its database: the licence data above), Resend (sending the free-trial reminder emails on day 7 and day 12, and a notice on day 14 when Bulk Bills disconnects from Xero; these stop as soon as you pay, and every email has an unsubscribe link). Some of these providers may process data outside the UK under standard contractual clauses.</p>
-<h2>Your choices</h2>
-<ul>
-<li>Sign out in the panel to clear tokens; &quot;Disconnect this organisation&quot; removes Bulk Bills&#x27; access to that organisation in Xero. You can also remove access in Xero under Settings → Connected apps.</li>
-<li>Removing the extension deletes all data it stored in Chrome. To have your licence data deleted from our server, email support@curatorpal.co.uk. To cancel a paid plan, use the link in your Stripe receipt email or email us.</li>
-</ul>
-<h2>Children</h2>
-<p>Bulk Bills is a business tool and is not intended for children.</p>
-<h2>Changes</h2>
-<p>We will update this page and the &quot;last updated&quot; date if anything changes.</p>
-<h2>Complaints</h2>
-<p>Contact support@curatorpal.co.uk. You can also complain to the UK Information Commissioner&#x27;s Office (ico.org.uk).</p>
-<p><em>Last updated: 2 November 2026</em></p>
-</body></html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulk Bills – Privacy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">Bulk Bills</a>
+      <nav class="site" aria-label="Site">
+        <a href="how-to.html">How to use</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="mailto:support@curatorpal.co.uk">Support</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      <h1>Bulk Bills – Privacy Policy</h1>
+      <p><strong>Who we are.</strong> Bulk Bills is a Chrome extension made by Peter Kruger, Bourne, Lincolnshire, United Kingdom ("we"). Contact: support@curatorpal.co.uk.</p>
+      <p>Bulk Bills works with Xero but is an independent product, not affiliated with, endorsed or sponsored by Xero Limited. Xero is a trademark of Xero Limited.</p>
+      <h2>What Bulk Bills does</h2>
+      <p>It lets you edit many <strong>draft</strong> bills in your Xero organisation at once (account codes, tracking, line descriptions, due dates, references, contacts). It previews every change and never edits approved, paid or voided bills.</p>
+      <h2>What data is processed, and where</h2>
+      <ul>
+        <li><strong>Your Xero data</strong> (draft bills, line items, suppliers' names, your chart of accounts, tracking categories, tax rates, contacts) is read from Xero's official API <strong>directly by the extension in your browser</strong>. Your bills and other accounting data are never sent to us or to anyone other than Xero.</li>
+        <li>It is held <strong>in memory only while the Bulk Bills panel is open</strong>, except for:</li>
+        <li class="sub"><strong>Batch history (undo data and change log):</strong> for each batch you applied in the last 7 days, the extension stores on your computer (Chrome local storage) the bill IDs, references and supplier names, the old and new values of only the fields it changed (for example a reference, due date, account code, tracking option, line description, contact), and the result for each bill, so you can undo the batch or download its change report later. The most recent results view is kept the same way. It is deleted automatically after <strong>7 days</strong>, when you click "Forget" (or "Hide results"), or when you remove the extension.</li>
+        <li class="sub"><strong>CSV change report:</strong> only if you click "Download", a file is saved to your computer. You control that file.</li>
+        <li><strong>Sign-in tokens.</strong> Xero access and refresh tokens are stored in Chrome's session storage and cleared when Chrome closes. If you turn on "Stay connected", the refresh token is kept in Chrome local storage on your computer until you sign out or remove the extension. Tokens are sent to Xero, except that to check your plan the extension also sends the current short-lived Xero access token to our licence server, which uses it once to ask Xero who you are and which organisations are connected, and does not store or log it.</li>
+        <li><strong>History notes.</strong> If you tick "Add a History note", a short note describing the change is written to each bill's history <strong>in Xero</strong>.</li>
+        <li><strong>Licence data (our server).</strong> To run the free trial and paid plans, our licence server (hosted by Supabase in the EU, Frankfurt) keeps: your Xero user ID and email address, the IDs of the Xero organisations you have connected, how many bill changes each batch made (a count and a batch ID, not the bills), your trial start date and plan, a random licence token (stored only as a hash), and which reminder emails were sent. It is kept while you use Bulk Bills; email us to have it deleted at any time.</li>
+        <li><strong>No analytics, no tracking, no advertising, no cookies of ours.</strong> The extension contacts Xero (login.xero.com, identity.xero.com, api.xero.com), our licence server (cncnthzaxpevxzmmxebo.supabase.co) and, only when you click a plan, opens Stripe's checkout page (buy.stripe.com) in a new tab. If you turn on the optional bills-page button, it runs a small script on go.xero.com that only adds that button.</li>
+        <li>We do <strong>not</strong> sell, share or aggregate your data, and we do <strong>not</strong> use it to train AI or machine-learning models.</li>
+      </ul>
+      <h2>Legal basis (UK GDPR)</h2>
+      <p>Processing happens on your own device to provide the service you asked for (contract / legitimate interests). Bills may contain personal data about sole-trader suppliers; that data stays in Xero and in your browser. Licence data and trial emails are processed to provide the service and the plan you chose (contract) and to remind you before the free trial ends (legitimate interests; you can unsubscribe with one click).</p>
+      <h2>Payments</h2>
+      <p>Payments are handled by <strong>Stripe</strong> (Stripe Payments Europe / Stripe, Inc.) on Stripe's own checkout page. Stripe processes your name, email, billing address and card details; we never see your card details. Stripe tells our licence server which plan you bought, your Stripe customer and subscription IDs and the subscription status, so the extension can unlock your plan.</p>
+      <p><strong>Processors we use:</strong> Stripe (payments), Supabase (hosting the licence server and its database: the licence data above), Resend (sending the free-trial reminder emails on day 7 and day 12, and a notice on day 14 when Bulk Bills disconnects from Xero; these stop as soon as you pay, and every email has an unsubscribe link). Some of these providers may process data outside the UK under standard contractual clauses.</p>
+      <h2>Your choices</h2>
+      <ul>
+        <li>Sign out in the panel to clear tokens; "Disconnect this organisation" removes Bulk Bills' access to that organisation in Xero. You can also remove access in Xero under Settings → Connected apps.</li>
+        <li>Removing the extension deletes all data it stored in Chrome. To have your licence data deleted from our server, email support@curatorpal.co.uk. To cancel a paid plan, use the link in your Stripe receipt email or email us.</li>
+      </ul>
+      <h2>Children</h2>
+      <p>Bulk Bills is a business tool and is not intended for children.</p>
+      <h2>Changes</h2>
+      <p>We will update this page and the "last updated" date if anything changes.</p>
+      <h2>Complaints</h2>
+      <p>Contact support@curatorpal.co.uk. You can also complain to the UK Information Commissioner's Office (ico.org.uk).</p>
+      <p><em>Last updated: 2 November 2026</em></p>
+    </main>
+
+    <footer class="site">
+      <p>Support: <a href="mailto:support@curatorpal.co.uk">support@curatorpal.co.uk</a></p>
+      <p class="fine">Bulk Bills is an independent product, not affiliated with, endorsed or sponsored by Xero Limited. Xero is a trademark of Xero Limited.</p>
+    </footer>
+  </div>
+</body>
+</html>
