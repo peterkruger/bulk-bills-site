@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SheetScoop – Privacy</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">SheetScoop</a>
+      <nav class="site" aria-label="Site">
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="mailto:support@curatorpal.co.uk">Support</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      <h1>SheetScoop – Privacy Policy</h1>
+      <p><strong>Who we are.</strong> SheetScoop is a Chrome extension made by Peter Kruger, Bourne, Lincolnshire, United Kingdom ("we"). Contact: support@curatorpal.co.uk.</p>
+
+      <h2>What SheetScoop does</h2>
+      <p>When you click its toolbar icon (or press Alt+Shift+S) on a page, it finds lists, product grids and tables on that page and turns them into rows and columns you can export. It only runs on a tab when you ask it to (Chrome’s “activeTab” permission); it has no access to other sites or tabs.</p>
+
+      <h2>What data is processed, and where</h2>
+      <ul>
+        <li><strong>Page content and scraped rows</strong> are read <strong>in your own browser tab</strong> and are not sent to us. During a multi-page run the rows are kept in Chrome’s session storage on your computer (cleared when Chrome closes or when you finish or clear the run). Exported CSV and Excel files are saved to your computer; copied rows go to your clipboard.</li>
+        <li><strong>Open in Google Sheets / Send to Google Sheets.</strong> If you choose one of these, your rows go from your browser to your own Google account. Direct export (Pro) uses Google sign-in with the <em>drive.file</em> permission, which only lets SheetScoop see and edit spreadsheets it created itself. The Google access token is handled by Chrome and is sent only to Google. We never receive your Google data.</li>
+        <li><strong>AI tidy columns (Pro and trial, only when you click it).</strong> The extension sends the <strong>column names and up to 20 sample rows</strong> of the table you’re tidying to our server, which sends them to <strong>OpenAI</strong> to suggest clearer column names and clean-up rules, then passes the suggestions back to you. Our server does not store the column names or rows, and we ask OpenAI not to store the request (<code>store: false</code>). Under OpenAI’s API terms, API data is not used to train their models; OpenAI may keep it for up to 30 days to monitor abuse. Don’t use AI tidy columns on tables containing personal or sensitive information you don’t want shared this way.</li>
+        <li><strong>A random install ID.</strong> The extension creates a random ID when installed. Our server keeps only a one-way hash of it, with a daily count of AI tidy-ups (to apply daily limits) and, if you start the free trial, its start and end time and how many tidy-ups it used.</li>
+        <li><strong>Licence data (Pro).</strong> When you upgrade, our licence server keeps: a licence ID, the email address you gave at checkout, your Stripe customer and subscription IDs, which plan you chose, the subscription status and renewal date, and random device tokens for the computers where Pro is on (stored only as hashes). If you use <strong>Restore purchase</strong>, we email a 6-digit code to that address; the code is stored only as a hash and stops working after 15 minutes. We also keep the IDs of Stripe events we have processed, so none is applied twice.</li>
+        <li><strong>On your computer only</strong> (Chrome local storage): your monthly free-scrape count, trial status, small usage counters for the in-extension tips and milestones, a list of spreadsheets SheetScoop created for you, and the cached Pro status with this computer’s licence token. These are deleted when you remove the extension.</li>
+        <li><strong>No analytics, no tracking, no advertising, no cookies of ours.</strong> The extension contacts only: the page you ask it to scrape, Google (only for Sheets export), our server (cncnthzaxpevxzmmxebo.supabase.co, only for AI tidy-ups, the trial and your licence), and, when you upgrade or manage your subscription, Stripe’s own checkout and billing pages (opened in a new tab).</li>
+        <li>We do <strong>not</strong> sell or share your data, and we do <strong>not</strong> use it to train AI or machine-learning models.</li>
+      </ul>
+
+      <h2>Payments</h2>
+      <p>Payments are handled by <strong>Stripe</strong> on Stripe’s own checkout page. Stripe processes your name, email, billing address and card details; we never see your card details. Stripe tells our licence server which plan you bought, your Stripe customer and subscription IDs, your email and the subscription status, so the extension can switch Pro on and off. You can cancel, change plan, update your card or get invoices from the options page (<em>Manage subscription</em>), which opens Stripe’s customer portal.</p>
+
+      <h2>Processors we use</h2>
+      <p>Supabase (hosting our server and its database, in the EU), OpenAI (AI tidy-up suggestions, only when you click AI tidy columns), Stripe (payments) and Resend (sending Restore purchase codes). Our hosting provider may log technical request details such as IP addresses for security for a short time. Some of these providers may process data outside the UK under standard contractual clauses.</p>
+
+      <h2>Legal basis (UK GDPR)</h2>
+      <p>We process this data to provide the service you asked for (contract), and to prevent abuse of the free plan, trial and AI limits (legitimate interests). Scraped page content stays on your device unless you choose Google Sheets export or AI tidy columns.</p>
+
+      <h2>How long we keep it</h2>
+      <p>Licence data is kept while you have Pro and for up to 6 years afterwards where we need it for tax and accounting records. Daily AI usage counts and trial records are kept for up to 12 months. Email us to have your data deleted at any time, except what we must keep by law.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>Removing the extension deletes all data it stored in Chrome.</li>
+        <li>To cancel Pro, use <em>Manage subscription</em> on the options page, or email us.</li>
+        <li>To get a copy of your data or have it deleted from our server, email support@curatorpal.co.uk.</li>
+        <li>Only scrape pages you’re allowed to, and respect each site’s terms. You are responsible for what you do with data you collect.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>SheetScoop is not intended for children under 13.</p>
+      <h2>Changes</h2>
+      <p>We will update this page and the "last updated" date if anything changes.</p>
+      <h2>Complaints</h2>
+      <p>Contact support@curatorpal.co.uk. You can also complain to the UK Information Commissioner’s Office (ico.org.uk).</p>
+      <p><em>Last updated: 16 November 2026</em></p>
+    </main>
+
+    <footer class="site">
+      <p>Support: <a href="mailto:support@curatorpal.co.uk">support@curatorpal.co.uk</a></p>
+    </footer>
+  </div>
+</body>
+</html>
